@@ -13,18 +13,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tidybrowser
+# tidybrowse
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-Tidybrowser is a meta package containing different packages easing web scrapping and the deployment of docker containers from R. 
+Tidybrowse is a meta package containing different packages easing web scrapping and the deployment of docker containers from R. 
 
 ## Installation
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("benjaminguinaudeau/tidybrowser")
+devtools::install_github("benjaminguinaudeau/tidybrowse")
 ```
 
 ## Packages
@@ -50,7 +50,7 @@ Selinput wraps up the python library pyautogui, which emulates mouse and keyboar
 bashR allows to run some simple bash functions from whithin R.
 
 ```{r}
-library(tidybrowser)
+library(tidybrowse)
 ```
 
 

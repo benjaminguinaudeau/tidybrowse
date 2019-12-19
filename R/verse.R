@@ -1,4 +1,4 @@
-core <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "bashR", "dplyr", "usethis")
+core <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "bashR", "hideR", "rvest")
 
 core_loaded <- function() {
   search <- paste0("package:", core)
@@ -10,7 +10,7 @@ core_unloaded <- function() {
 }
 
 
-tidybrowser_attach <- function() {
+tidybrowse_attach <- function() {
   to_load <- core_unloaded()
   if (length(to_load) == 0)
     return(invisible())
@@ -18,7 +18,7 @@ tidybrowser_attach <- function() {
   msg(
     cli::rule(
       left = crayon::bold("Attaching packages"),
-      right = paste0("tidybrowser ", package_version("tidybrowser"))
+      right = paste0("tidybrowse ", package_version("tidybrowse"))
     ),
     startup = TRUE
   )
@@ -53,9 +53,9 @@ package_version <- function(x) {
   paste0(version, collapse = ".")
 }
 
-#' Conflicts between the tidybrowser and other packages
+#' Conflicts between the tidybrowse and other packages
 #'
-#' This function lists all the conflicts between packages in the tidybrowser
+#' This function lists all the conflicts between packages in the tidybrowse
 #' and other packages that you have loaded.
 #'
 #' If dplyr is one of the select packages, then the following four conflicts
@@ -65,28 +65,28 @@ package_version <- function(x) {
 #'
 #' @export
 #' @examples
-#' tidybrowser_conflicts()
-tidybrowser_conflicts <- function() {
+#' tidybrowse_conflicts()
+tidybrowse_conflicts <- function() {
   envs <- purrr::set_names(search())
   objs <- invert(lapply(envs, ls_env))
 
   conflicts <- purrr::keep(objs, ~ length(.x) > 1)
 
-  pkg_names <- paste0("package:", tidybrowser_packages())
+  pkg_names <- paste0("package:", tidybrowse_packages())
   conflicts <- purrr::keep(conflicts, ~ any(.x %in% pkg_names))
 
   conflict_funs <- purrr::imap(conflicts, confirm_conflict)
   conflict_funs <- purrr::compact(conflict_funs)
 
-  structure(conflict_funs, class = "tidybrowser_conflicts")
+  structure(conflict_funs, class = "tidybrowse_conflicts")
 }
 
-tidybrowser_conflict_message <- function(x) {
+tidybrowse_conflict_message <- function(x) {
   if (length(x) == 0) return("")
 
   header <- cli::rule(
     left = crayon::bold("Conflicts"),
-    right = "tidybrowser_conflicts()"
+    right = "tidybrowse_conflicts()"
   )
 
   pkgs <- x %>% purrr::map(~ gsub("^package:", "", .))
@@ -108,8 +108,8 @@ tidybrowser_conflict_message <- function(x) {
 }
 
 #' @export
-print.tidybrowser_conflicts <- function(x, ..., startup = FALSE) {
-  cli::cat_line(tidybrowser_conflict_message(x))
+print.tidybrowse_conflicts <- function(x, ..., startup = FALSE) {
+  cli::cat_line(tidybrowse_conflict_message(x))
 }
 
 #' @importFrom magrittr %>%
@@ -139,26 +139,26 @@ ls_env <- function(env) {
   x
 }
 
-#' Update tidybrowser packages
+#' Update tidybrowse packages
 #'
-#' This will check to see if all tidybrowser packages (and optionally, their
+#' This will check to see if all tidybrowse packages (and optionally, their
 #' dependencies) are up-to-date, and will install after an interactive
 #' confirmation.
 #'
 #' @param recursive If \code{TRUE}, will also check all dependencies of
-#'   tidybrowser packages.
+#'   tidybrowse packages.
 #' @export
 #' @examples
 #' \dontrun{
-#' tidybrowser_update()
+#' tidybrowse_update()
 #' }
-tidybrowser_update <- function(recursive = FALSE) {
+tidybrowse_update <- function(recursive = FALSE) {
 
-  deps <- tidybrowser_deps(recursive)
+  deps <- tidybrowse_deps(recursive)
   behind <- dplyr::filter(deps, behind)
 
   if (nrow(behind) == 0) {
-    cli::cat_line("All tidybrowser packages up-to-date")
+    cli::cat_line("All tidybrowse packages up-to-date")
     return(invisible())
   }
 
@@ -176,14 +176,14 @@ tidybrowser_update <- function(recursive = FALSE) {
   invisible()
 }
 
-#' List all tidybrowser dependencies
+#' List all tidybrowse dependencies
 #'
 #' @param recursive If \code{TRUE}, will also list all dependencies of
-#'   tidybrowser packages.
+#'   tidybrowse packages.
 #' @export
-tidybrowser_deps <- function(recursive = FALSE) {
+tidybrowse_deps <- function(recursive = FALSE) {
   pkgs <- utils::available.packages()
-  deps <- tools::package_dependencies("tidybrowser", pkgs, recursive = recursive)
+  deps <- tools::package_dependencies("tidybrowse", pkgs, recursive = recursive)
 
   pkg_deps <- unique(sort(unlist(deps)))
 
@@ -227,20 +227,20 @@ text_col <- function(x) {
 
 }
 
-#' List all packages in the tidybrowser
+#' List all packages in the tidybrowse
 #'
-#' @param include_self Include tidybrowser in the list?
+#' @param include_self Include tidybrowse in the list?
 #' @export
 #' @examples
-#' tidybrowser_packages()
-tidybrowser_packages <- function(include_self = TRUE) {
-  raw <- utils::packageDescription("tidybrowser")$Imports
+#' tidybrowse_packages()
+tidybrowse_packages <- function(include_self = TRUE) {
+  raw <- utils::packageDescription("tidybrowse")$Imports
   imports <- strsplit(raw, ",")[[1]]
   parsed <- gsub("^\\s+|\\s+$", "", imports)
   names <- vapply(strsplit(parsed, "\\s+"), "[[", 1, FUN.VALUE = character(1))
 
   if (include_self) {
-    names <- c(names, "tidybrowser")
+    names <- c(names, "tidybrowse")
   }
 
   names
@@ -266,11 +266,11 @@ style_grey <- function(level, ...) {
     return()
 
   crayon::num_colors(TRUE)
-  tidybrowser_attach()
+  tidybrowse_attach()
 
   if (!"package:conflicted" %in% search()) {
-    x <- tidybrowser_conflicts()
-    msg(tidybrowser_conflict_message(x), startup = TRUE)
+    x <- tidybrowse_conflicts()
+    msg(tidybrowse_conflict_message(x), startup = TRUE)
   }
 
 }
