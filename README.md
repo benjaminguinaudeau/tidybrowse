@@ -45,7 +45,6 @@ docker container, with a running selenium server.
 ### bashR
 
 bashR allows to run some simple bash functions from whithin R.
-<<<<<<< HEAD
 
 ``` r
 library(tidybrowser)
@@ -60,5 +59,3 @@ library(tidybrowser)
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 ```
-=======
->>>>>>> 845aad7f7710f8a11e671c550efecbc2a952eda3
