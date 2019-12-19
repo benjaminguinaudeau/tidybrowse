@@ -24,7 +24,7 @@ Tidybrowser is a meta package containing different packages easing web scrapping
 
 ``` r
 # install.packages("devtools")
-devtools::install.packages("benjaminguinaudeau/tidybrowser")
+devtools::install_github("benjaminguinaudeau/tidybrowser")
 ```
 
 ## Packages
