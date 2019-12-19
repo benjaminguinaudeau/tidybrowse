@@ -1,20 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidybrowser
+# tidybrowse
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-Tidybrowser is a meta package containing different packages easing web
+Tidybrowse is a meta package containing different packages easing web
 scrapping and the deployment of docker containers from R.
 
 ## Installation
 
 ``` r
 # install.packages("devtools")
-devtools::install.packages("benjaminguinaudeau/tidybrowser")
+devtools::install_github("benjaminguinaudeau/tidybrowse")
 ```
 
 ## Packages
@@ -42,22 +42,24 @@ Selinput wraps up the python library pyautogui, which emulates mouse and
 keyboard input. It allows to easily type, click and scroll inside a
 docker container, with a running selenium server.
 
+### hideR
+
+hideR provides tool to handle vpn tunnel from R on Mac OS and Linux.
+
 ### bashR
 
 bashR allows to run some simple bash functions from whithin R.
 
 ``` r
-library(tidybrowser)
-#> ── Attaching packages ───────────────────────────────────────────────────────────── tidybrowser 0.0.1 ──
+library(tidybrowse)
+#> ── Attaching packages ───────────────────────────────────────────────────── tidybrowse 0.0.1 ──
 #> ✓ RSelenium    1.7.5          ✓ selinput     0.0.0.9000
 #> ✓ dockeR       0.1.0          ✓ bashR        0.0.0.9000
-#> ✓ tidyselenium 0.0.0.9000     ✓ dplyr        0.8.3     
-#> ✓ tidyweb      0.0.0.9000     ✓ usethis      1.5.1
-#> ── Conflicts ──────────────────────────────────────────────────────────────── tidybrowser_conflicts() ──
+#> ✓ tidyselenium 0.0.0.9000     ✓ hideR        0.0.0.9000
+#> ✓ tidyweb      0.0.0.9000     ✓ rvest        0.3.5
+#> ── Conflicts ──────────────────────────────────────────────────────── tidybrowse_conflicts() ──
 #> x bashR::append() masks base::append()
 #> x bashR::exec()   masks dockeR::exec()
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
 ```
 
 ## Thanks

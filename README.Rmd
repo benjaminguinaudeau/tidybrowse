@@ -45,6 +45,10 @@ Tidyweb allows to represent xml-tree data in a tidy way. It works as well with x
 
 Selinput wraps up the python library pyautogui, which emulates mouse and keyboard input. It allows to easily type, click and scroll inside a docker container, with a running selenium server. 
 
+### hideR
+
+hideR provides tool to handle vpn tunnel from R on Mac OS and Linux.
+
 ### bashR
 
 bashR allows to run some simple bash functions from whithin R.
