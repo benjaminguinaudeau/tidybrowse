@@ -27,3 +27,9 @@ Imports:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
+Remotes: benjaminguinaudeau/bashR
+Remotes: benjaminguinaudeau/dockeR
+Remotes: benjaminguinaudeau/hideR
+Remotes: benjaminguinaudeau/tidyselenium
+Remotes: benjaminguinaudeau/selinput
+Remotes: benjaminguinaudeau/tidyweb
