@@ -13,10 +13,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tidybrowse
 
-<!-- badges: start -->
-<!-- badges: end -->
+
+# tidybrowse <img src="man/figures/tidybrowse_logo.jpeg" width="400px" align="right" />
+
+
+```{r, echo = FALSE, results='asis', eval = T}
+
+library(badger)
+
+git_repo <- "benjaminguinaudeau/tidybrowse"
+
+cat(
+  badge_lifecycle(),
+	badge_code_size(git_repo),
+	badge_last_commit(git_repo)
+)
+```
+
+
 
 Tidybrowse is a meta package containing different packages easing web scrapping and the deployment of docker containers from R. 
 

@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tidybrowse
+# tidybrowse <img src="man/figures/tidybrowse_logo.jpeg" width="400px" align="right" />
 
-<!-- badges: start -->
-
-<!-- badges: end -->
+[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![](https://img.shields.io/github/languages/code-size/benjaminguinaudeau/tidybrowse.svg)](https://github.com/benjaminguinaudeau/tidybrowse)
+[![](https://img.shields.io/github/last-commit/benjaminguinaudeau/tidybrowse.svg)](https://github.com/benjaminguinaudeau/tidybrowse/commits/master)
 
 Tidybrowse is a meta package containing different packages easing web
 scrapping and the deployment of docker containers from R.
@@ -52,14 +52,15 @@ bashR allows to run some simple bash functions from whithin R.
 
 ``` r
 library(tidybrowse)
-#> ── Attaching packages ───────────────────────────────────────────────────── tidybrowse 0.0.1 ──
+#> ── Attaching packages ──────────────────────────────────────────────── tidybrowse 0.0.1 ──
 #> ✓ RSelenium    1.7.5          ✓ selinput     0.0.0.9000
 #> ✓ dockeR       0.1.0          ✓ bashR        0.0.0.9000
 #> ✓ tidyselenium 0.0.0.9000     ✓ hideR        0.0.0.9000
 #> ✓ tidyweb      0.0.0.9000     ✓ rvest        0.3.5
-#> ── Conflicts ──────────────────────────────────────────────────────── tidybrowse_conflicts() ──
+#> ── Conflicts ─────────────────────────────────────────────────── tidybrowse_conflicts() ──
 #> x bashR::append() masks base::append()
 #> x bashR::exec()   masks dockeR::exec()
+#> x bashR::sudo()   masks dockeR::sudo()
 ```
 
 ## Thanks
