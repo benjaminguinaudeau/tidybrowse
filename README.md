@@ -48,14 +48,19 @@ bashR allows to run some simple bash functions from whithin R.
 
 ``` r
 library(tidybrowser)
-#> ── Attaching packages ──────────────────────────────────────────────────── tidybrowser 0.0.1 ──
+#> ── Attaching packages ───────────────────────────────────────────────────────────── tidybrowser 0.0.1 ──
 #> ✓ RSelenium    1.7.5          ✓ selinput     0.0.0.9000
 #> ✓ dockeR       0.1.0          ✓ bashR        0.0.0.9000
 #> ✓ tidyselenium 0.0.0.9000     ✓ dplyr        0.8.3     
 #> ✓ tidyweb      0.0.0.9000     ✓ usethis      1.5.1
-#> ── Conflicts ─────────────────────────────────────────────────────── tidybrowser_conflicts() ──
+#> ── Conflicts ──────────────────────────────────────────────────────────────── tidybrowser_conflicts() ──
 #> x bashR::append() masks base::append()
 #> x bashR::exec()   masks dockeR::exec()
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 ```
+
+## Thanks
+
+A huge thank you to [Favstats](https://github.com/favstats) for
+designing each of the hex-stickers.

@@ -53,3 +53,7 @@ bashR allows to run some simple bash functions from whithin R.
 library(tidybrowser)
 ```
 
+
+## Thanks
+
+A huge thank you to [Favstats](https://github.com/favstats) for designing each of the hex-stickers. 
