@@ -76,3 +76,5 @@ library(tidybrowse)
 ## Thanks
 
 A huge thank you to [Favstats](https://github.com/favstats) for designing each of the hex-stickers. 
+
+
