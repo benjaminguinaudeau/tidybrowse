@@ -1,4 +1,4 @@
-core <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "bashR", "hideR", "rvest")
+core <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "rvest") #"bashR", "hideR"
 
 core_loaded <- function() {
   search <- paste0("package:", core)

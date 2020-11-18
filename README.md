@@ -53,12 +53,10 @@ docker container, with a running selenium server.
 ``` r
 library(tidybrowse)
 #> ── Attaching packages ────────────────────────────────────── tidybrowse 0.0.1 ──
-#> ✓ RSelenium    1.7.7          ✓ selinput     0.0.0.9000
-#> ✓ dockeR       0.1.0          ✓ bashR        0.0.0.9000
-#> ✓ tidyselenium 0.0.0.9000     ✓ hideR        0.0.0.9000
-#> ✓ tidyweb      0.0.0.9000     ✓ rvest        0.3.6
+#> ✓ RSelenium    1.7.7          ✓ tidyweb      0.0.0.9000
+#> ✓ dockeR       0.1.0          ✓ selinput     0.0.0.9000
+#> ✓ tidyselenium 0.0.0.9000     ✓ rvest        0.3.6
 #> ── Conflicts ───────────────────────────────────────── tidybrowse_conflicts() ──
-#> x bashR::exec()    masks dockeR::exec()
 #> x dockeR::system() masks base::system()
 ```
 
