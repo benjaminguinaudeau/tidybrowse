@@ -27,7 +27,6 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Remotes: 
-    benjaminguinaudeau/bashR,
     benjaminguinaudeau/dockeR,
     benjaminguinaudeau/tidyselenium,
     benjaminguinaudeau/selinput,

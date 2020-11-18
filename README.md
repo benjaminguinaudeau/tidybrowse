@@ -27,24 +27,24 @@ devtools::install_github("benjaminguinaudeau/tidybrowse")
 
 ## Packages
 
-### dockeR
+### [dockeR](https://github.com/benjaminguinaudeau/dockeR)
 
 dockeR wraps up docker command line tools and allows to manage docker
 containers from R. It can be use to deploy selenium servers, shiny-app
 servers, rstudio-servers, etc…
 
-### tidyselenium
+### [tidyselenium](https://github.com/benjaminguinaudeau/tidyselenium)
 
 This wraps up RSelenium function in a pipable way. It also offers
 function to easily communicate with a selenium server running inside a
 docker container.
 
-### tidyweb
+### [tidyweb](https://github.com/benjaminguinaudeau/tidyweb)
 
 Tidyweb allows to represent xml-tree data in a tidy way. It works as
 well with xml-nodes as with selenium elements.
 
-### selinput
+### [selinput](https://github.com/benjaminguinaudeau/selinput)
 
 Selinput wraps up the python library pyautogui, which emulates mouse and
 keyboard input. It allows to easily type, click and scroll inside a
