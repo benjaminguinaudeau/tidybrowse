@@ -10,6 +10,14 @@
 Tidybrowse is a meta package containing different packages easing web
 scrapping and the deployment of docker containers from R.
 
+## Examples
+
+A list of use-cases
+
+-   [Searching Citations on Google
+    Scholar](example/cleaning_citations.md): Use Selenium to scrape
+    citations from Google Scholar
+
 ## Installation
 
 ``` r
@@ -42,25 +50,16 @@ Selinput wraps up the python library pyautogui, which emulates mouse and
 keyboard input. It allows to easily type, click and scroll inside a
 docker container, with a running selenium server.
 
-### hideR
-
-hideR provides tool to handle vpn tunnel from R on Mac OS and Linux.
-
-### bashR
-
-bashR allows to run some simple bash functions from whithin R.
-
 ``` r
 library(tidybrowse)
-#> ── Attaching packages ──────────────────────────────────────────────── tidybrowse 0.0.1 ──
-#> ✓ RSelenium    1.7.5          ✓ selinput     0.0.0.9000
+#> ── Attaching packages ────────────────────────────────────── tidybrowse 0.0.1 ──
+#> ✓ RSelenium    1.7.7          ✓ selinput     0.0.0.9000
 #> ✓ dockeR       0.1.0          ✓ bashR        0.0.0.9000
 #> ✓ tidyselenium 0.0.0.9000     ✓ hideR        0.0.0.9000
-#> ✓ tidyweb      0.0.0.9000     ✓ rvest        0.3.5
-#> ── Conflicts ─────────────────────────────────────────────────── tidybrowse_conflicts() ──
-#> x bashR::append() masks base::append()
-#> x bashR::exec()   masks dockeR::exec()
-#> x bashR::sudo()   masks dockeR::sudo()
+#> ✓ tidyweb      0.0.0.9000     ✓ rvest        0.3.6
+#> ── Conflicts ───────────────────────────────────────── tidybrowse_conflicts() ──
+#> x bashR::exec()    masks dockeR::exec()
+#> x dockeR::system() masks base::system()
 ```
 
 ## Thanks

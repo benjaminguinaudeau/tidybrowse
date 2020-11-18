@@ -35,6 +35,12 @@ cat(
 
 Tidybrowse is a meta package containing different packages easing web scrapping and the deployment of docker containers from R. 
 
+## Examples
+
+A list of use-cases
+  
+  + [Searching Citations on Google Scholar](example/cleaning_citations.md): Use Selenium to scrape citations from Google Scholar
+
 ## Installation
 
 ``` r
@@ -59,14 +65,6 @@ Tidyweb allows to represent xml-tree data in a tidy way. It works as well with x
 ### selinput
 
 Selinput wraps up the python library pyautogui, which emulates mouse and keyboard input. It allows to easily type, click and scroll inside a docker container, with a running selenium server. 
-
-### hideR
-
-hideR provides tool to handle vpn tunnel from R on Mac OS and Linux.
-
-### bashR
-
-bashR allows to run some simple bash functions from whithin R.
 
 ```{r}
 library(tidybrowse)
