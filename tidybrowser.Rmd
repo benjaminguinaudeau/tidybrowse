@@ -9,20 +9,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 options(usethis.full_name = "Benjamin Guinaudeau")
-library(pkgverse)
+pacman::p_load(pkgverse)
 
-tidybrowse <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "bashR", "hideR", "rvest")
+tidybrowse <- c("RSelenium", "dockeR", "tidyselenium", "tidyweb", "selinput", "rvest") #hideR , "bashR"
 
 ## create packages dir
 # dir.create("../tidybrowser")
 
 ## create tidyweb pkgverse
+remove.packages(tidybrowse)
+
+devtools::install("../dockeR")
+devtools::install("../tidyweb")
+devtools::install("../tidyselenium")
+devtools::install("../selinput")
+
 pkgverse(pkg = "tidybrowse",
          pkgs = tidybrowse,
          keep = "..",
          # use = c("readme_rmd", "rstudio", "mit_license", "git"),
          install_if = TRUE
 )
+
 
 library(tidybrowse)
 
